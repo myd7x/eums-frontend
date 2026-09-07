@@ -1,75 +1,107 @@
 <!-- ===================== index.html ===================== -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EduZone – Componentized</title>
-  <!-- CSS order -->
-  <link rel="stylesheet" href="css/plugins.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/templete.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" class="skin" href="css/skin/skin-1.css">
-  <link rel="stylesheet" href="plugins/revolution/revolution/css/revolution.min.css">
-  <style>#loading-area{display:none}</style>
-</head>
-<body id="bg">
-  <div class="page-wraper">
-    <div id="loading-area"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduZone – Componentized</title>
+    <!-- CSS order -->
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/templete.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" class="skin" href="css/skin/skin-1.css" />
+    <!-- أيقونات القالب (لو بتستخدمها في الهيدر وغيره) -->
+    <link rel="stylesheet" href="plugins/flaticon/education/flaticon.css" />
 
-    <!-- Include components -->
-    <div data-include="components/header.html"></div>
-    <div class="page-content bg-white">
-      <div data-include="components/slider.html"></div>
-      <div data-include="components/about-highlights.html"></div>
-      <div data-include="components/about-two.html"></div>
-      <div data-include="components/goals-counters.html"></div>
-      <div data-include="components/admissions.html"></div>
-      <div data-include="components/gallery.html"></div>
-      <div data-include="components/events.html"></div>
+    <!-- (اختياري لكن يُفضَّل) لو plugins.css ما بيحتويش ستايل هذه الإضافات -->
+    <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.css" />
+    <link
+      rel="stylesheet"
+      href="plugins/lightgallery/css/lightgallery.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="plugins/revolution/revolution/css/revolution.min.css"
+    />
+
+    <style>
+      #loading-area {
+        display: none;
+      }
+    </style>
+  </head>
+  <body id="bg">
+    <div class="page-wraper">
+      <div id="loading-area"></div>
+
+      <!-- Include components -->
+      <div data-include="components/header.html"></div>
+      <div class="page-content bg-white">
+        <div data-include="components/slider.html"></div>
+
+        <div data-include="components/about-two.html"></div>
+        <div data-include="components/goals-counters.html"></div>
+        <div data-include="components/admissions.html"></div>
+        <div data-include="components/gallery.html"></div>
+        <div data-include="components/about-highlights.html"></div>
+        <div data-include="components/events.html"></div>
+      </div>
+      <div data-include="components/newsletter.html"></div>
+      <div data-include="components/footer.html"></div>
+
+      <button class="scroltop style1 white icon-up" type="button">
+        <i class="fas fa-arrow-up"></i>
+      </button>
     </div>
-    <div data-include="components/newsletter.html"></div>
-    <div data-include="components/footer.html"></div>
 
-    <button class="scroltop style1 white icon-up" type="button"><i class="fas fa-arrow-up"></i></button>
-  </div>
+    <!-- JS core -->
+    <script src="js/jquery.min.js"></script>
+    <script src="plugins/wow/wow.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+    <script src="plugins/magnific-popup/magnific-popup.js"></script>
+    <script src="plugins/counter/waypoints-min.js"></script>
+    <script src="plugins/counter/counterup.min.js"></script>
+    <script src="plugins/imagesloaded/imagesloaded.js"></script>
+    <script src="plugins/masonry/masonry-3.1.4.js"></script>
+    <script src="plugins/masonry/masonry.filter.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="plugins/lightgallery/js/lightgallery-all.min.js"></script>
 
-  <!-- JS core -->
-  <script src="js/jquery.min.js"></script>
-  <script src="plugins/wow/wow.js"></script>
-  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
-  <script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-  <script src="plugins/magnific-popup/magnific-popup.js"></script>
-  <script src="plugins/counter/waypoints-min.js"></script>
-  <script src="plugins/counter/counterup.min.js"></script>
-  <script src="plugins/imagesloaded/imagesloaded.js"></script>
-  <script src="plugins/masonry/masonry-3.1.4.js"></script>
-  <script src="plugins/masonry/masonry.filter.js"></script>
-  <script src="plugins/owl-carousel/owl.carousel.js"></script>
-  <script src="plugins/lightgallery/js/lightgallery-all.min.js"></script>
-  
-  <!-- Revolution Slider -->
-  <script src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
-  <script src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
-  <script src="plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-  <script src="plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-  <script src="plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-  <script src="plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-  <script src="plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-  <script src="plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-  <script src="plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-  <script src="plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="js/jquery.lazy.min.js"></script>
 
-  <!-- Theme helpers -->
-  <script src="js/custom.js"></script>
-  <script src="js/dz.carousel.js"></script>
-  <script src="plugins/countdown/jquery.countdown.js"></script>
-  <script src="js/dz.ajax.js"></script>
-  <script src="js/rev.slider.js"></script>
+    <!-- Revolution Slider -->
+    <script src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js"></script>
 
-  <!-- HTML includes + post-init -->
-  <script src="js/components-loader.js"></script>
-</body>
+    <!-- Theme helpers -->
+    <script src="js/custom.js"></script>
+    <script src="js/dz.carousel.js"></script>
+    <script src="plugins/countdown/jquery.countdown.js"></script>
+    <script src="js/dz.ajax.js"></script>
+    <script src="js/rev.slider.js"></script>
+
+    <!-- HTML includes + post-init -->
+    <script src="js/components-loader.js"></script>
+    <script src="js/init-page.js"></script>
+
+    <script>
+      jQuery(function ($) {
+        if ($.fn && $.fn.Lazy) {
+          $(".lazy").Lazy();
+        }
+      });
+    </script>
+  </body>
 </html>

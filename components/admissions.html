@@ -1,17 +1,209 @@
-<!-- ===================== components/admissions.html ===================== -->
-<div class="section-full content-inner bg-gray">
-  <div class="container">
-    <div class="section-head text-black text-center"><h2 class="title">Admissions Process</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p></div>
-    <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12 m-b30 wow bounceInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-        <div class="icon-bx-wraper bx-style-1 p-a30 center fly-box bg-white"><div class="icon-lg m-b20"><span class="icon-cell text-primary"><i class="flaticon-closed-notebook-and-pen"></i></span></div><div class="icon-content"><h5 class="dlab-tilte text-uppercase">Request Info</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</p><a href="contact-1.html" class="site-button btnhover6">Request Info</a></div></div>
+<!-- ========== About EUMS – Clean Card Deck Variant ========== -->
+<section
+  id="about-eums-v2"
+  class="section-full content-inner"
+  style="background-image: url(images/background/kindergarten/line.png)"
+>
+  <style>
+    /* ---------- Scoped styles (won’t leak) ---------- */
+    #about-eums-v2 {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      isolation: isolate;
+    }
+    /* soft white vignette for readability */
+    #about-eums-v2::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: radial-gradient(
+        1200px 600px at 20% 0%,
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.55) 60%,
+        rgba(255, 255, 255, 0.25) 100%
+      );
+    }
+
+    #about-eums-v2 .wrap {
+      position: relative;
+      z-index: 1;
+    }
+    #about-eums-v2 .eyebrow {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: var(--rgba-primary-1);
+      color: var(--color-primary);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+    #about-eums-v2 .title {
+      margin: 0.5rem 0 1rem;
+      color: #07294d;
+    }
+    #about-eums-v2 .lead {
+      color: #3a4a60;
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    /* Card grid */
+    #about-eums-v2 .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    @media (max-width: 1199px) {
+      #about-eums-v2 .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 991px) {
+      #about-eums-v2 .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 575px) {
+      #about-eums-v2 .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #about-eums-v2 .card {
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #eef2f6;
+      border-radius: 16px;
+      padding: 22px 18px 20px;
+      box-shadow: 0 10px 24px rgba(7, 41, 77, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    #about-eums-v2 .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(7, 41, 77, 0.1);
+    }
+    /* subtle number watermark */
+    #about-eums-v2 .no {
+      position: absolute;
+      right: 10px;
+      top: 6px;
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 1;
+      color: rgba(7, 41, 77, 0.06);
+      pointer-events: none;
+    }
+    #about-eums-v2 .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--rgba-primary-1);
+      color: var(--color-primary);
+      border: 1px solid var(--rgba-primary-2);
+      font-size: 22px;
+      margin-bottom: 0.75rem;
+    }
+    #about-eums-v2 .card h5 {
+      margin: 0 0 0.3rem;
+      color: #07294d;
+      font-weight: 800;
+    }
+    #about-eums-v2 .card p {
+      margin: 0;
+      color: #55657a;
+      font-size: 0.95rem;
+    }
+  </style>
+
+  <div class="container wrap">
+    <!-- Header -->
+    <div class="text-center m-b20">
+      <span class="eyebrow"
+        ><i class="la la-university"></i> European University of Modern
+        Sciences</span
+      >
+      <h2 class="title">About the University of Brest</h2>
+    </div>
+
+    <!-- Intro -->
+    <div class="row justify-content-center m-b30">
+      <div class="col-lg-10">
+        <p class="lead">
+          The University of Brest is a leading academic institution in western
+          France, renowned for excellence in teaching and research across many
+          disciplines. It brings together nine faculties, a central research
+          center, and a graduate school.
+        </p>
+        <p class="lead m-b0">
+          Programs span arts &amp; humanities, science &amp; technology, law
+          &amp; economics, and social sciences. Beyond bachelor’s degrees,
+          master’s and doctoral paths enable advanced scholarship and impactful
+          research with distinguished faculty.
+        </p>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 m-b30 wow bounceInUp" data-wow-duration="2s" data-wow-delay="0.6s">
-        <div class="icon-bx-wraper bx-style-1 p-a30 center fly-box bg-white"><div class="icon-lg m-b20"><span class="icon-cell text-primary"><i class="flaticon-graduated-student-avatar"></i></span></div><div class="icon-content"><h5 class="dlab-tilte text-uppercase">Apply Now</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</p><a href="contact-1.html" class="site-button btnhover6">Apply Online</a></div></div>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid">
+      <div class="card">
+        <span class="no">01</span>
+        <div class="icon"><i class="la la-briefcase"></i></div>
+        <h5>College of Business Administration</h5>
+        <p>Management, leadership, and the modern business landscape.</p>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 m-b30 wow bounceInUp" data-wow-duration="2s" data-wow-delay="0.9s">
-        <div class="icon-bx-wraper bx-style-1 p-a30 center fly-box bg-white"><div class="icon-lg m-b20"><span class="icon-cell text-primary"><i class="flaticon-test"></i></span></div><div class="icon-content"><h5 class="dlab-tilte text-uppercase">Submit</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</p><a href="contact-1.html" class="site-button btnhover6">Submit Form</a></div></div>
+      <div class="card">
+        <span class="no">02</span>
+        <div class="icon"><i class="la la-drafting-compass"></i></div>
+        <h5>College of Engineering &amp; Design</h5>
+        <p>Engineering, architecture, and design with hands-on projects.</p>
+      </div>
+      <div class="card">
+        <span class="no">03</span>
+        <div class="icon"><i class="la la-chalkboard-teacher"></i></div>
+        <h5>College of Education</h5>
+        <p>Research-driven pedagogy and classroom practice.</p>
+      </div>
+      <div class="card">
+        <span class="no">04</span>
+        <div class="icon"><i class="la la-coins"></i></div>
+        <h5>Faculty of Economics</h5>
+        <p>Markets, policy, and the flow of goods &amp; services.</p>
+      </div>
+      <div class="card">
+        <span class="no">05</span>
+        <div class="icon"><i class="la la-user-graduate"></i></div>
+        <h5>College of Graduate Studies</h5>
+        <p>Advanced education and research for post-baccalaureate scholars.</p>
+      </div>
+      <div class="card">
+        <span class="no">06</span>
+        <div class="icon"><i class="la la-calculator"></i></div>
+        <h5>College of Accountancy</h5>
+        <p>Preparation in financial, managerial, and audit practices.</p>
+      </div>
+      <div class="card">
+        <span class="no">07</span>
+        <div class="icon"><i class="la la-laptop-code"></i></div>
+        <h5>Technology School</h5>
+        <p>Paths in engineering, computer science, and emerging tech.</p>
+      </div>
+      <div class="card">
+        <span class="no">08</span>
+        <div class="icon"><i class="la la-flask"></i></div>
+        <h5>Scientific Research Center</h5>
+        <p>Interdisciplinary research advancing knowledge across fields.</p>
       </div>
     </div>
   </div>
-</div>
+</section>

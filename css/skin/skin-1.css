@@ -1,33 +1,37 @@
-/*===================== Premery bg color =====================*/
-:root {
-	--color-primary: #a57b05;
-	--color-secondary: #5AB8EB;
-	--color-hover: #a57b05;
-	
-	--rgba-primary-1: rgba(136, 96, 208,0.1);
-	--rgba-primary-2: rgba(136, 96, 208,0.2);
-	--rgba-primary-3: rgba(136, 96, 208,0.3);
-	--rgba-primary-4: rgba(136, 96, 208,0.4);
-	--rgba-primary-5: rgba(136, 96, 208,0.5);
-	--rgba-primary-6: rgba(136, 96, 208,0.6);
-	--rgba-primary-7: rgba(136, 96, 208,0.7);
-	--rgba-primary-8: rgba(136, 96, 208,0.8);
-	--rgba-primary-9: rgba(136, 96, 208,0.9);
+/*===================== Theme Colors (Blue Palette) =====================*/
+:root{
+  /* Primary Blue + Navy + Cyan + Pale Blue */
+  --color-primary:   #3775B8;  /* الأزرق الأساسي */
+  --color-secondary: #0F2A50;  /* الكُحلي (Navy) */
+  --color-accent:    #5AB8EB;  /* سماوي (Cyan) */
+  --color-surface:   #E6F3FF;  /* أزرق باهت للسطوح/الخلفيات الخفيفة */
+  --color-hover:     #2C5FA0;  /* أزرق أغمق للهفر */
+  --text-dark:       #0F2A50;
 
-	--rgba-secondary-1: rgba(90, 184, 235,0.1);
-	--rgba-secondary-2: rgba(90, 184, 235,0.2);
-	--rgba-secondary-3: rgba(90, 184, 235,0.3);
-	--rgba-secondary-4: rgba(90, 184, 235,0.4);
-	--rgba-secondary-5: rgba(90, 184, 235,0.5);
-	--rgba-secondary-6: rgba(90, 184, 235,0.6);
-	--rgba-secondary-7: rgba(90, 184, 235,0.7);
-	--rgba-secondary-8: rgba(90, 184, 235,0.8);
-	--rgba-secondary-9: rgba(90, 184, 235,0.9);
+  /* RGBA helpers for primary (55,117,184) */
+  --rgba-primary-1: rgba(55,117,184,0.1);
+  --rgba-primary-2: rgba(55,117,184,0.2);
+  --rgba-primary-3: rgba(55,117,184,0.3);
+  --rgba-primary-4: rgba(55,117,184,0.4);
+  --rgba-primary-5: rgba(55,117,184,0.5);
+  --rgba-primary-6: rgba(55,117,184,0.6);
+  --rgba-primary-7: rgba(55,117,184,0.7);
+  --rgba-primary-8: rgba(55,117,184,0.8);
+  --rgba-primary-9: rgba(55,117,184,0.9);
 
-	--text-dark: #271646;
+  /* RGBA helpers for accent (cyan) */
+  --rgba-secondary-1: rgba(90,184,235,0.1);
+  --rgba-secondary-2: rgba(90,184,235,0.2);
+  --rgba-secondary-3: rgba(90,184,235,0.3);
+  --rgba-secondary-4: rgba(90,184,235,0.4);
+  --rgba-secondary-5: rgba(90,184,235,0.5);
+  --rgba-secondary-6: rgba(90,184,235,0.6);
+  --rgba-secondary-7: rgba(90,184,235,0.7);
+  --rgba-secondary-8: rgba(90,184,235,0.8);
+  --rgba-secondary-9: rgba(90,184,235,0.9);
 }
 
-/* Hex */
+/*===================== Primary (Blue) surfaces =====================*/
 .bg-primary,
 .meet-ask-row:after,
 .dlab-separator.style-skew[class*="style-"]:after,
@@ -51,7 +55,7 @@
 .footer-line:after,
 .testimonial-1 .quote-left:before,
 .testimonial-2 .quote-left:before,
-.site-filters .active >[class*="site-button"],
+.site-filters .active > [class*="site-button"],
 .list-num-count > li:before,
 .date-style-4 .post-date strong,
 .date-style-3 .post-date,
@@ -156,12 +160,12 @@ button.scroltop,
 .header-nav .nav > li .mega-menu > li > ul li > a:after,
 .header-nav .nav > li .sub-menu li > a:after,
 .searchform input[type="submit"],
-.widget_calendar table tbody td#today ,
+.widget_calendar table tbody td#today,
 .dropdown-item.active, .dropdown-item:active{
-	background-color: #a57b05;
+  background-color: var(--color-primary);
 }
 
-/*Hex color :hover */
+/* Primary hover / active */
 .site-button:active,
 .site-button:hover,
 .site-button:focus,
@@ -199,17 +203,12 @@ button.scroltop,
 .searchform input[type="submit"]:active,
 .btnhover14::after,
 .btnhover13::after,
-.btnhover15::after {
-	background-color: #a57b05;
+.btnhover15::after{
+  background-color: var(--color-hover);
 }
-.about-us .dlab-tabs .nav-tabs li.active { border-right: 4px solid #a57b05; }
+.about-us .dlab-tabs .nav-tabs li.active{ border-right:4px solid var(--color-hover); }
 
-/* Rgba color (unchanged helper) */
-.dlab-info-has.bg-primary,
-.dlab-info-has.bg-secondry:hover,
-.tp-bannertimer.tp-bottom { background-color: rgba(26, 188, 156, 0.9); }
-
-/*===================== 	Premery text color =====================*/
+/* Text using primary (blue) */
 a,
 .text-primary,
 .primary li:before,
@@ -277,16 +276,16 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
 .dlab-box-bg .icon-box-btn .site-button,
 .service-box-4 .service-images i,
 .list-2 li:hover:before,
-.widget_rss ul .rss-date {
-	color: #a57b05;
+.widget_rss ul .rss-date{
+  color: var(--color-primary);
 }
-@media only screen and (max-width: 991px) {
-	.nav-dark.header-nav .nav > li > a:hover,
-	.nav-dark.header-nav .nav > li > a:active,
-	.nav-dark.header-nav .nav > li > a:focus { color: #a57b05; }
+@media (max-width: 991px){
+  .nav-dark.header-nav .nav > li > a:hover,
+  .nav-dark.header-nav .nav > li > a:active,
+  .nav-dark.header-nav .nav > li > a:focus{ color: var(--color-primary); }
 }
 
-/*===================== Premery border color =====================*/
+/* Borders using primary (blue) */
 .navbar-toggle,
 .testimonial-4 .testimonial-pic,
 .testimonial-4:after,
@@ -310,31 +309,35 @@ input[type="radio"] + label:hover:before,
 button.scroltop.style3:after,
 .navstyle3 .header-nav .nav > li > .mega-menu,
 .navstyle3 .header-nav .nav > li .sub-menu,
-.site-button.outline {
-	border-color: #a57b05;
+.site-button.outline{
+  border-color: var(--color-primary);
 }
-.owl-item.active.center .testimonial-8 .testimonial-text:after { border-top: 25px solid #a57b05; }
-.dlab-tabs.border-top .nav-tabs > li.active > a { border-top-color: #a57b05; }
+.owl-item.active.center .testimonial-8 .testimonial-text:after{ border-top:25px solid var(--color-primary); }
+.dlab-tabs.border-top .nav-tabs > li.active > a{ border-top-color: var(--color-primary); }
 .comments-area .comment-form p input[type="submit"]:hover,
 .comments-area .comment-form p input[type="submit"]:focus,
-.comments-area .comment-form p input[type="submit"]:active { border-color: #a57b05; }
-.dlab-team4 .dlab-media:after { border-color: #a57b05 #e6e5e5 #e6e5e5 #a57b05!important; }
+.comments-area .comment-form p input[type="submit"]:active{ border-color: var(--color-hover); }
+.dlab-team4 .dlab-media:after{ border-color: var(--color-primary) #e6e5e5 #e6e5e5 var(--color-primary)!important; }
 
-/*===================== Secondery bg color =====================*/
-.testimonial-14 .testimonial-detail{ background-color: #a57b05; }
+/*===================== Secondary (Navy) =====================*/
+.testimonial-14 .testimonial-detail{ background-color: var(--color-secondary); }
 
-/*===================== New Important =====================*/
+/*===================== Accents & Important =====================*/
 a.text-primary:hover,
-button.scroltop.white { color: #a57b05 !important; }
+button.scroltop.white{ color: var(--color-hover) !important; }
+
 .text-primary,
 .site-footer .footer-bottom a:hover,
 footer .widget_services ul li a:hover,
-.overlay-icon .check-km i.icon-bx-xs { color: #a57b05 !important; }
+.overlay-icon .check-km i.icon-bx-xs{ color: var(--color-primary) !important; }
+
 .bg-primary,
 .pagination-bx.gray .pagination > li.active > a,
-.pagination-bx.gray .pagination > li > a:hover { background-color: #a57b05 !important; }
+.pagination-bx.gray .pagination > li > a:hover{ background-color: var(--color-primary) !important; }
+
 a.bg-primary:focus,
-a.bg-primary:hover { background-color: #a57b05 !important; }
+a.bg-primary:hover{ background-color: var(--color-hover) !important; }
+
 .testimonial-14,
 .dlab-team11-area.dots-theme.owl-theme .owl-dots .owl-dot.active span,
 .dlab-team11 .dlab-media,
@@ -342,34 +345,53 @@ a.bg-primary:hover { background-color: #a57b05 !important; }
 .img-ho1:after,
 .frame-box .about-box,
 .service-box-4:hover .service-images img,
-.contact-no .contact-left{ border-color: #a57b05!important; }
-.testimonial-4 [class*="quote-"]{ border-color: #a57b05; }
+.contact-no .contact-left{ border-color: var(--color-primary)!important; }
+
+.testimonial-4 [class*="quote-"]{ border-color: var(--color-primary); }
 .testimonial-14 .testimonial-detail:after,
-.testimonial-14 .testimonial-detail:before { border-top-color: #a57b05!important; }
-button.scroltop { box-shadow: -4px 4px 24px -10px #a57b05!important; }
+.testimonial-14 .testimonial-detail:before{ border-top-color: var(--color-secondary)!important; }
+
+button.scroltop{ box-shadow: -4px 4px 24px -10px var(--color-primary)!important; }
 .navstyle2 .header-nav .nav > li.active > a:after,
-.navstyle2 .header-nav .nav > li:hover > a:after { box-shadow: inset 0 0 0 2px #a57b05; }
+.navstyle2 .header-nav .nav > li:hover > a:after{ box-shadow: inset 0 0 0 2px var(--color-primary); }
 
-/* ===== selection ===== */
-::-moz-selection { background: #a57b05; }
-::selection { background: #a57b05; }
+/* Selection highlight */
+::-moz-selection{ background: var(--color-primary); }
+::selection{ background: var(--color-primary); }
 
-/* secondry color */
-.text-secondry { color: #07294d; }
+/*===================== Secondary surfaces (Navy) =====================*/
+.text-secondry{ color: var(--color-secondary); }
 .item-info-in,
 .header-transparent.is-fixed .main-bar,
-.overlay-black-light:after, 
-.overlay-black-middle:after, 
+.overlay-black-light:after,
+.overlay-black-middle:after,
 .overlay-black-dark:after,
 .footer-top,
 .bg-secondry,
 .footer-bottom,
 .site-button-secondry,
-.top-bar{ background-color:#07294d; }
+.top-bar{
+  background-color: var(--color-secondary);
+}
 
+/*===================== Accent helpers (Cyan / Pale) =====================*/
+.bg-accent{ background-color: var(--color-accent) !important; }
+.text-accent{ color: var(--color-accent) !important; }
+.bg-surface{ background-color: var(--color-surface) !important; }
+
+/* Misc */
 .site-filters .active > [class*="site-button"],
 .request-form .request-form-header h2,
 .request-form .request-form-header i,
 .request-form .request-form-header p,
 .owl-item.active.center .testimonial-text,
-.site-button.btn-tb { color: #000; }
+.site-button.btn-tb{
+  color:#000;
+}
+
+/* Optional: timer/primary rgba usage */
+.dlab-info-has.bg-primary,
+.dlab-info-has.bg-secondry:hover,
+.tp-bannertimer.tp-bottom{
+  background-color: var(--rgba-primary-9);
+}

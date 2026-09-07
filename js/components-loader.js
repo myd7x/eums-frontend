@@ -34,3 +34,19 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', includeAll);
   else includeAll();
 })();
+// مثال بسيط لوَدّيك حدث بعد ما كل الـ includes تخلص
+(function () {
+  const targets = document.querySelectorAll('[data-include]');
+  if (!targets.length) return document.dispatchEvent(new Event('components:loaded'));
+
+  let left = targets.length;
+  targets.forEach(el => {
+    fetch(el.getAttribute('data-include'))
+      .then(r => r.text())
+      .then(html => { el.outerHTML = html; })
+      .finally(() => {
+        if (--left === 0) document.dispatchEvent(new Event('components:loaded'));
+      });
+  });
+})();
+document.dispatchEvent(new Event('includes:ready'));
